@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
 import { ExceptionLoggerFilter } from './util/exceptionLogger.filter';
+import { MediaModule } from './media/media.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { ExceptionLoggerFilter } from './util/exceptionLogger.filter';
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URL),
     UserModule,
+    MediaModule,
   ],
   controllers: [],
   providers: [

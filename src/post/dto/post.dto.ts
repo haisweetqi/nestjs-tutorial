@@ -6,6 +6,8 @@ export class CreatePostDto {
   description: string;
   @IsNotEmpty()
   content: string;
+  user: any;
+  categories: [string];
 }
 
 export class UpdatePostDto {
